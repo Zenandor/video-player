@@ -60,18 +60,40 @@ window.addEventListener("mouseout", function(){
 })
 */
 
-$("body").mousemove(function(){
+function back() {
 	$('#controls').animate({
-		"top": "-30px"
-	}, 500);
-
-	setTimeout(function(){
-		$('#controls').animate({
 		"top": "0px"
+	}, 500);
+	check = true;
+}
+
+
+var check = true;
+
+$("body").mousemove(function(){
+
+	if (check) {
+		$('#controls').animate({
+			"top": "-30px"
 		}, 500);
-	}, 3000);
+		check = false;
+
+		var timeout = null;
+
+		$(document).on('mousemove', function() {
+		    clearTimeout(timeout);
+
+		    timeout = setTimeout(function() {
+		        back();
+		    }, 3000);
+		});
+	}
 
 });
+
+setInterval(function() {
+	console.log(check);
+}, 100);
 
 
 
