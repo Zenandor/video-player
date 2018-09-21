@@ -60,32 +60,54 @@ window.addEventListener("mouseout", function(){
 })
 */
 
-window.addEventListener("mouseover", function(){
-	var pos = 0;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (pos == -30) {
-            clearInterval(id);
-        } else {
-            pos--; 
-            controls.style.top = pos + 'px'; 
-        }
-    }
+$("body").mousemove(function(){
+	$('#controls').animate({
+		"top": "-30px"
+	}, 500);
 
-    setTimeout(function(){
-		var pos = -30;
-	    var id = setInterval(frame, 10);
-	    function frame() {
-	        if (pos == 0) {
-	            clearInterval(id);
-	        } else {
-	            pos++; 
-	            controls.style.top = pos + 'px'; 
-	        }
-    	}
-    }, 10000)
+	setTimeout(function(){
+		$('#controls').animate({
+		"top": "0px"
+		}, 500);
+	}, 3000);
 
 });
+
+
+
+
+
+
+/*
+var pos = 0;
+window.addEventListener("mousemove", function(){
+	if(pos > -30){
+		pos = 0;
+	    var id = setInterval(frame, 10);
+	    function frame() {
+	        if (pos == -30) {
+	            clearInterval(id);
+	        } else {
+	            pos--; 
+	            controls.style.top = pos + 'px'; 
+	        }
+	    }
+	
+
+    setTimeout(function(){
+    	pos = -30;
+    	for(pos; pos <= 0; pos++){
+    		setTimeout(function(){
+    			controls.style.top = pos + 'px';
+    		}, 10);
+    		
+    	}
+
+    }, 3000)
+	}
+
+});
+*/
 
 mute.addEventListener("mouseover", function(){
 	volume.style.visibility = "visible";

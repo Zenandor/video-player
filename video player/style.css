@@ -12,12 +12,12 @@
 	width: 750px;
 	height: 500px;
 	margin: auto;
+	text-align: center;
+	vertical-align: center;
 }
 
 #screenPlay{
-	position: absolute;
-	left: calc(50% - 50px);
-	top: calc(50% - 50px);
+	margin-top: calc(25% + 50px);
 	width: 50px;
 	height: 50px;
 	display: inline-block;
