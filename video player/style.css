@@ -1,0 +1,182 @@
+#container{
+	width: 1000px;
+	height: 750px;
+	text-align: center;
+
+}
+
+
+#screen{
+	position: relative;
+	background-color: black;
+	width: 750px;
+	height: 500px;
+	margin: auto;
+}
+
+#screenPlay{
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+
+.play{
+	background-image: url(images/play.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#controls{
+	position: relative;
+	background-color: grey;
+	width: 750px;
+	height: 30px;
+	margin: auto;
+}
+
+#controlsPlay{
+	position: absolute;
+	left: 10px;
+	top: 2px;
+	display: inline-block;
+	margin: auto;
+	width: 15px;
+	height: 15px;
+	margin-top: 5px;
+	margin-left: 2px;
+}
+
+#mute, #dash{
+	position: absolute;
+	left: 45px;
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#mute{
+	background-image: url(images/mute.svg);
+}
+
+#dash{
+	background-image: url(images/dash.svg);
+	visibility: hidden;
+
+}
+
+#time{
+	position: absolute;
+	left: 85px;
+	top: 5px;
+	display: inline-block;
+	color: white;
+	font-family: 'Ubuntu';
+	
+}
+
+#bar{
+	position: absolute;
+	left: 130px;
+	top: 7px;
+	width: 500px;
+	height: 15px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 16px;
+}
+
+#barFilled{
+	position: absolute;
+	left: 130px;
+	top: 7px;
+	width: 400px;
+	height: 15px;
+	background-color: white;
+	border-radius: 16px;
+}
+
+#barDot{
+	position: absolute;
+	left: 520px;
+	top: 7px;
+	width: 15px;
+	height: 15px;
+	background-color: orange;
+	border-radius: 100%;
+
+}
+
+#length{
+	position: absolute;
+	left: 635px;
+	top: 5px;
+	display: inline-block;
+	color: white;
+	font-family: Ubuntu;
+}
+
+.playing{
+	background-image: url(images/pause.svg);
+}
+
+#fullscreen{
+	position: absolute;
+	background-image: url(images/Open.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	left: 720px;
+	top: 7px;
+	width: 15px;
+	height: 15px;
+
+}
+
+#volume{
+	position: absolute;
+	top: -60px;
+	width: 30px;
+	height: 60px;
+	background-color: grey;
+	text-align: center;
+	visibility: hidden;
+}
+
+#slider{
+	position: absolute;
+	bottom: 5px;
+	left: 7px;
+	width: 15px;
+	height: 50px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 16px;
+}
+
+#sliderFilled{
+	position: absolute;
+	left: 7px;
+	bottom: 5px;
+	width: 15px;
+	height: 30px;
+	background-color: white;
+	border-radius: 16px;
+}
+
+#sliderDot{
+	position: absolute;
+	left: 7px;
+	bottom: 25px;
+	width: 15px;
+	height: 15px;
+	background-color: orange;
+	border-radius: 100%;
+
+}
+
